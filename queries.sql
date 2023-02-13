@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS Cookenu_users(
+    id VARCHAR(255) PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(64) NOT NULL UNIQUE,
+    password VARCHAR(64) NOT NULL
+);
