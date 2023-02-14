@@ -1,7 +1,8 @@
-import { IdGenerator } from '../services/IdGeneration';
+import { v4 } from 'uuid';
+
 
 export interface UserDTO{
-    id: number,
+    id: any,
     name: string,
     email: string,
     password: string
@@ -13,6 +14,6 @@ export interface InputUserDTO{
     password: string
 }
 export interface AuthenticationData {
-    id: string,
+    id: any,
 
  }

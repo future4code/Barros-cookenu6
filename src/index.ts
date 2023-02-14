@@ -1,3 +1,6 @@
-import app from './app';
+import { app } from "./app";
+import { userRouter } from "./router/userRouter";
 
-app
+
+
+app.use("", userRouter)
