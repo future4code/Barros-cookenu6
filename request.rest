@@ -1,8 +1,41 @@
-POST http://localhost:3003/signup/
+POST  http://localhost:3003/signup
+Content-Type: application/json
+
+
+{
+
+"name": "Mauricio Toledo", 
+"email": "maurilium@gmail.com", 
+"password": "1234567"
+
+
+}
+###
+GET http://localhost:3003/ping
+###
+POST http://localhost:3003/login 
 Content-Type: application/json
 
 {
-    "name":"Mauricio Toledo", 
-    "email":"Maurilio@email.com", 
-    "password":"1233210"
+
+"name": "Mauricio Toledo", 
+"email": "maurilium@gmail.com", 
+"password": "1234567"
+
+
+}
+###
+GET http://localhost:3003/all
+Content-Type:  application/json
+
+{
+
+}
+###
+POST http://localhost:3003/recipe 
+Content-Type: application/json
+
+{
+    "title": "ovo mexido ", 
+    "description": "coloque o ovo na panela e mexa."
 }

@@ -4,6 +4,6 @@ import { UserController } from "../controller/UserController";
 export const userRouter = express.Router()
 const userController = new UserController()
 
-
-// ENDPOINT CRIAR USUARIO
 userRouter.post("/signup", userController.signup)
+userRouter.post("/login", userController.login)
+userRouter.get("/all", userController.getAll)
