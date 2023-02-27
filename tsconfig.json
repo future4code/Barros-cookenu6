@@ -9,8 +9,6 @@
         "noImplicitAny": true,
         "esModuleInterop": true,
         "skipLibCheck": true,
-        "forceConsistentCasingInFileNames": true,
-        "sourceMap": true, 
-        "noEmitOnError": true
+        "forceConsistentCasingInFileNames": true
     }
 }

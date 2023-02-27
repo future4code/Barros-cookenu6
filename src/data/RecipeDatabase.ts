@@ -4,14 +4,14 @@ import { CustomError } from "../customError/CustomError";
 export class RecipeDatabase extends BaseDatabase {
     private static TABLE_NAME: string = "cookenu_recipe"
 
-    create = async ({ id, title, description }: RecipeDTO) => {
+    create = async ({ id, title, description, idAuthor }: RecipeDTO) => {
         try {
 
             await RecipeDatabase.connection.insert({
                 id,
                 title,
                 description,
-               
+                id_author: idAuthor
             }).into(RecipeDatabase.TABLE_NAME)
 
 

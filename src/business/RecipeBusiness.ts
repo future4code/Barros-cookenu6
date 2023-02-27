@@ -14,13 +14,13 @@ export class RecipeBusiness {
     createRecipe = async (input: InputRecipeDTO) => {
         try {
 
-            const { title, description } = input
+            const { title, description, idAuthor } = input
 
             if (!title || !description) {
-                throw new CustomError(400, 'Preencha os campos');
+                throw new CustomError(400, 'Fill in the fields "title" and "description"');
             }
 
-           
+            const idUser = tokenGenerator.tokenData(idAuthor)
 
             const id = idGenerator.generateId()
 
@@ -28,12 +28,10 @@ export class RecipeBusiness {
                 id: id,
                 title: title,
                 description: description,
-                
+                idAuthor: idUser.id
             })
 
         } catch (error: any) {
             throw new CustomError(400, error.message);
         }
-    }
-
-}
+    }}
